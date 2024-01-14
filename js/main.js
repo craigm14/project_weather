@@ -1,5 +1,7 @@
 /* openweathermap.org api key generated and url to openweather.org  */
+/* custom key */
 const apiKey = "da638781bf87ede35a9a383b9d6636ee";
+/* Fetches info from url */
 const apiUrl = "https://api.openweathermap.org/data/2.5/weather";
 
 /* list of variables for location  input box, search button, location/temperature entered by user */
@@ -24,6 +26,7 @@ searchButton.addEventListener("click", () => {
 /* function fetchWeather */
 function fetchWeather(location) {
   /* if location is good, url/location= const url  */
+  /* I get lost around here...*/
   const url = `${apiUrl}?q=${location}&appid=${apiKey}&units=metric`;
   /* Fetch url */
   fetch(url)
