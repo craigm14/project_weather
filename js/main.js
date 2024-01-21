@@ -6,6 +6,7 @@ const locationElement = document.getElementById("location");
 const temperatureElement = document.getElementById("temperature");
 const windElement = document.getElementById("wind");
 const descriptionElement = document.getElementById("description");
+const timezoneElement = document.getElementById("timezone");
 
 searchButton.addEventListener("click", () => {
   const location = locationInput.value;
@@ -23,6 +24,8 @@ function fetchWeather(location) {
       temperatureElement.textContent = `${Math.round(data.main.temp)}°C`;
       windElement.textContent = `${Math.round(data.wind.speed)}°kmh`;
       descriptionElement.textContent = data.weather[0].description;
+      timezoneElement.textContent = data.timezone;
+      console.log(data);
     })
 
     .catch((error) => {
