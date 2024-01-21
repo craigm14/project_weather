@@ -28,7 +28,6 @@ function fetchWeather(location) {
       timezoneElement.textContent = data.timezone;
       const iconURL = `https://openweathermap.org/img/wn/${data.weather[0].icon}.png`;
       weatherIcon.setAttribute("src", iconURL);
-
       console.log(data);
     })
 
