@@ -7,6 +7,7 @@ const temperatureElement = document.getElementById("temperature");
 const windElement = document.getElementById("wind");
 const descriptionElement = document.getElementById("description");
 const timezoneElement = document.getElementById("timezone");
+const weatherIcon = document.querySelector(".icon img");
 
 searchButton.addEventListener("click", () => {
   const location = locationInput.value;
@@ -25,6 +26,9 @@ function fetchWeather(location) {
       windElement.textContent = `${Math.round(data.wind.speed)}°kmh`;
       descriptionElement.textContent = data.weather[0].description;
       timezoneElement.textContent = data.timezone;
+      const iconURL = `https://openweathermap.org/img/wn/${data.weather[0].icon}.png`;
+      weatherIcon.setAttribute("src", iconURL);
+
       console.log(data);
     })
 
