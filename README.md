@@ -23,11 +23,13 @@ location is useable fetchWeather(location) function is called _/
 /_ function fetchWeather _/
 /_ if location is good, url/location = const url _/
 
-    /* Fetch sends a get requests to the url requesting the const url info, responce is then sent
+/* Fetch sends a get requests to the url requesting the const url info, responce is then sent
 
 back and converted into json, 2nd .then is a promise that has a responce holding the data that we need to
 display the location and temp \*/
 
-      /* .catch displays error message if the fetch url is invalid location */
+/* .catch displays error message if the fetch url is invalid location */
 
-       /*fiveDayForecast = console.log(data.forecast.forecastDay);*/
+ /*fiveDayForecast = console.log(data.forecast.forecastDay);*/
+
+/* Added date/timezone function (seconds, timezone) 
